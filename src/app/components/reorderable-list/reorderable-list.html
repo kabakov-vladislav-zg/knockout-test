@@ -1,3 +1,6 @@
-<div data-bind="foreach: categories">
+<div 
+  data-bind="foreach: categories"
+  class="reorderable-list"
+>
   <reorderable-list-item params="{ index: $index, data: $data }"></reorderable-list-item>
 </div>

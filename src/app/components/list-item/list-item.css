@@ -1,0 +1,36 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: .75rem 1rem;
+  border: 1px solid #DFE4EF;
+  margin-bottom: -1px;
+}
+
+.list-item__toggle {
+  border-color: #DFE4EF;
+  border-radius: 50%;
+  width: 1,375rem;
+  height: 1,375rem;
+  margin-right: .75rem;
+  background: url('img/arrow.svg') no-repeat center;
+  transform: rotate(180deg);
+}
+
+.list-item__toggle_open {
+  transform: rotate(0);
+}
+
+.list-item__name {
+  font-size: .8rem;
+  margin-right: auto;
+}
+
+.list-item__name_strong {
+  font-weight: bold;
+}
+
+.list-item__drag {
+  width: 1,375rem;
+  height: 1,375rem;
+  background: url('img/drag.svg') no-repeat center;
+}

@@ -17,13 +17,23 @@ module.exports = {
   stats: {
     children: true,
   },
+  resolve: {
+    alias: {
+      img: path.resolve(__dirname, 'src/assets/img'),
+    },
+  },
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: "css-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              import: true,
+            },
+          },
         ],
       },
 			{ test: /\.html$/, loader: 'html-loader', }

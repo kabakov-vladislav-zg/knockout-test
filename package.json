@@ -6,7 +6,9 @@
     "build": "webpack --mode=production"
   },
   "dependencies": {
-    "knockout": "3.5.1"
+    "@fontsource/fira-sans": "^5.0.21",
+    "knockout": "3.5.1",
+    "modern-normalize": "^3.0.0"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",

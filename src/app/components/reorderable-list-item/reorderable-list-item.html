@@ -1,4 +1,14 @@
-<div data-bind="text: name"></div>
-<div data-bind="foreach: subcategories">
-  <div data-bind="text: $data"></div>
+<div class="reorderable-list-item">
+  <list-item
+    params="{ nested: false, name: name }"
+  ></list-item>
+  <div
+    data-bind="foreach: subcategories"
+    class="reorderable-list-item__subcategories"
+  >
+    <list-item
+      params="{ nested: true, name: $data }"
+    ></list-item>
+  </div>
 </div>
+

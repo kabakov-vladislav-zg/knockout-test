@@ -1,0 +1,16 @@
+<div class="list-item">
+  <!-- ko ifnot: nested -->
+    <button
+      data-bind="ifnot: nested"
+      class="button list-item__toggle"
+      type="button"
+    ></button>
+  <!-- /ko -->
+  <div
+    data-bind="text: name, css: { 'list-item__name_strong': !nested }"
+    class="list-item__name"
+  ></div>
+  <button
+    class="button list-item__drag"
+  ></button>
+</div>

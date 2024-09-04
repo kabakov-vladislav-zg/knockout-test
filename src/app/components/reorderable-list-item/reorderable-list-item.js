@@ -2,6 +2,8 @@ import ko from 'knockout';
 import reorderableListItemHtml from './reorderable-list-item.html';
 import './reorderable-list-item.css';
 
+import '../list-item/list-item.js';
+
 class ReorderableListItemViewModel {
   constructor({ data, index }) {
     this.name = data.name;
