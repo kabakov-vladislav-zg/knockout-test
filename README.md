@@ -1,3 +1,5 @@
+## GitHub Pages
+https://kabakov-vladislav-zg.github.io/knockout-test/
 ## Node version
 
 v18.18.2
