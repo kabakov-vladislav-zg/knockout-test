@@ -1,6 +1,6 @@
 <div class="reorderable-list-item">
   <list-item
-    params="{ nested: false, name: name, toggle: toggle, open: open, drag: drag }"
+    params="{ nested: false, name: name, toggle: toggle, open: open, drag: drag, position: getPosition() }"
   ></list-item>
   <!-- ko if: open -->
     <div
@@ -12,7 +12,7 @@
       class="reorderable-list-item__subcategories"
     >
       <list-item
-        params="{ nested: true, name: $data, drag: $component.drag }"
+        params="{ nested: true, name: $data, drag: $component.drag, position: $component.getPosition($index) }"
       ></list-item>
     </div>
   <!-- /ko -->

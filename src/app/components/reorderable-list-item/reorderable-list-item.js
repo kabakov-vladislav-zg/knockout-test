@@ -20,6 +20,14 @@ class ReorderableListItemViewModel {
     self.open = ko.observable(false);
     self.transitionStyle = ko.observable(null);
 
+    self.getPosition = (index2 = null) => {
+      const position = [self.index()];
+      if (index2 !== null) {
+        position.push(index2());
+      }
+      return JSON.stringify(position);
+    }
+
     const onclose = ({ target }) => {
       if (target === self.listElem) {
         self.transitionStyle({ height: 'auto' });

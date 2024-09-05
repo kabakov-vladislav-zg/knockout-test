@@ -1,4 +1,7 @@
-<div class="list-item">
+<div
+  class="list-item"
+  data-bind="descendantsComplete: onItemComplete, css: { 'list-item_nested': nested }, attr: { 'data-position': position }"
+>
   <!-- ko ifnot: nested -->
     <button
       data-bind="click: toggle, css: { 'list-item__toggle_open': open }"
@@ -12,6 +15,6 @@
   ></div>
   <button
     class="button list-item__drag"
-    data-bind="click: drag"
+    data-bind="event: { pointerdown: drag.bind($data, itemElem, event) }"
   ></button>
 </div>
