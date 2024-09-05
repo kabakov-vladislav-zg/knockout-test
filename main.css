@@ -1,3 +1,6 @@
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/modern-normalize/modern-normalize.css ***!
+  \**********************************************************************************************************************************/
 /*! modern-normalize v3.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -212,6 +215,9 @@ summary {
 	display: list-item;
 }
 
+/*!*******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/@fontsource/fira-sans/cyrillic.css ***!
+  \*******************************************************************************************************************************/
 /* fira-sans-cyrillic-100-normal */
 @font-face {
   font-family: 'Fira Sans';
@@ -292,9 +298,15 @@ summary {
   font-weight: 900;
   src: url(b9f90068d9e7da3520f5.woff2) format('woff2'), url(59d01f5758c2982c016d.woff) format('woff');
 }
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/assets/css/font.css ***!
+  \*******************************************************************************************************/
 body {
   font-family: "Fira Sans";
 }
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/assets/css/button.css ***!
+  \*********************************************************************************************************/
 .button {
   display: inline-block;
   font-weight: 400;
@@ -311,8 +323,14 @@ body {
   font-size: 1rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/assets/css/main.css ***!
+  \*******************************************************************************************************/
 
 
+/*!****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/app/components/reorderable-list/reorderable-list.css ***!
+  \****************************************************************************************************************************************/
 .reorderable-list {
   margin: 60px 30px;
   max-width: 1190px;
@@ -334,6 +352,9 @@ body {
 .reorderable-list__dropable {
   box-shadow: 0px 3px 16px 0px #0066FFB2;
 }
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/app/components/reorderable-list-item/reorderable-list-item.css ***!
+  \**************************************************************************************************************************************************/
 .reorderable-list-item__subcategories {
   padding-left: 1rem;
   overflow: hidden;
@@ -346,6 +367,9 @@ body {
   height: 48px;
 }
 
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./src/app/components/list-item/list-item.css ***!
+  \**************************************************************************************************************************/
 .list-item {
   background: #fff;
   display: flex;
