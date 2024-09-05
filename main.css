@@ -1,0 +1,386 @@
+/*! modern-normalize v3.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+
+body {
+	margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}
+
+/* fira-sans-cyrillic-100-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url(53bfee6a545d3b217946.woff2) format('woff2'), url(a6ec49e7126608a2a6ec.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-200-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url(5314ac1b39cf67eccb36.woff2) format('woff2'), url(9b2c628be310ffa1195d.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-300-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(bf45c3ece725d6ae5564.woff2) format('woff2'), url(7d10f96256a299fe0f02.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-400-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(ff71c63325bee1312092.woff2) format('woff2'), url(810ffcd142e7073e9c24.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-500-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(cb70635be2e362080efc.woff2) format('woff2'), url(c3976334353e4d8704e9.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-600-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(29bc9351c988c013271d.woff2) format('woff2'), url(689f8f3d6fda0b399104.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-700-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(0ae0ead9dc52219d59c8.woff2) format('woff2'), url(5a16e0d6a8f6da19fb4d.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-800-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(a9ccc4256153479adaa0.woff2) format('woff2'), url(68b52396baf49c6c0e5c.woff) format('woff');
+}
+
+/* fira-sans-cyrillic-900-normal */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url(b9f90068d9e7da3520f5.woff2) format('woff2'), url(59d01f5758c2982c016d.woff) format('woff');
+}
+body {
+  font-family: "Fira Sans";
+}
+.button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .5rem;
+  font-size: 1rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.reorderable-list {
+  margin: 60px 30px;
+  max-width: 1190px;
+  display: flex;
+  flex-direction: column;
+}
+.reorderable-list__divider {
+  position: relative;
+}
+.reorderable-list__divider::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  background: #0066FF;
+}
+.reorderable-list__dropable {
+  box-shadow: 0px 3px 16px 0px #0066FFB2;
+}
+.reorderable-list-item__subcategories {
+  padding-left: 1rem;
+  overflow: hidden;
+  transition-duration: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.reorderable-list-item__placeholder {
+  height: 48px;
+}
+
+.list-item {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: .75rem 1rem;
+  border: 1px solid #DFE4EF;
+  margin-top: -1px;
+}
+
+.list-item__toggle {
+  border-color: #DFE4EF;
+  border-radius: 50%;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-right: .75rem;
+  background: url(6a4f8163caea9431dafb.svg) no-repeat center;
+  transform: rotate(180deg);
+}
+
+.list-item__toggle_open {
+  transform: rotate(0);
+}
+
+.list-item__name {
+  font-size: .8rem;
+  margin-right: auto;
+}
+
+.list-item__name_strong {
+  font-weight: bold;
+}
+
+.list-item__drag {
+  width: 1.375rem;
+  height: 1.375rem;
+  background: url(3798bfd69622ee41ebc1.svg) no-repeat center;
+}
+
