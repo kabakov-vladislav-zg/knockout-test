@@ -3,18 +3,23 @@
     params="{ nested: false, name: name, toggle: toggle, open: open, drag: drag, position: getPosition() }"
   ></list-item>
   <!-- ko if: open -->
-    <div
-      data-bind="
-        foreach: subcategories,
-        descendantsComplete: $component.onListComplete,
-        style: transitionStyle,
-      "
-      class="reorderable-list-item__subcategories"
-    >
-      <list-item
-        params="{ nested: true, name: $data, drag: $component.drag, position: $component.getPosition($index) }"
-      ></list-item>
-    </div>
+    <!-- ko if: subcategories().length > 0 -->
+      <div
+        data-bind="
+          foreach: subcategories,
+          descendantsComplete: $component.onListComplete,
+          style: transitionStyle,
+        "
+        class="reorderable-list-item__subcategories"
+      >
+        <list-item
+          params="{ nested: true, name: $data, drag: $component.drag, position: $component.getPosition($index()) }"
+        ></list-item>
+      </div>
+    <!-- /ko -->
+    <!-- ko if: subcategories().length === 0 -->
+      <div class="reorderable-list-item__placeholder" data-bind="attr: { 'data-position': $component.getPosition(0) }"></div>
+    <!-- /ko -->
   <!-- /ko -->
 </div>
 

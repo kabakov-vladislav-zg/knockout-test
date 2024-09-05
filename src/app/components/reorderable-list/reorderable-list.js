@@ -60,7 +60,7 @@ class ReorderableListViewModel {
         const elemBelow = document.elementFromPoint(centerX, event.clientY);
         newElem.style.visibility = 'visible';
         if (!elemBelow) return;
-        const isSameItem = elemBelow.className === elem.className;
+        const isSameItem = (elemBelow.className === elem.className) || (elemBelow.className === 'reorderable-list-item__placeholder');
         if (!isSameItem) return;
         const position = JSON.parse(elemBelow.dataset.position);
         const sameItemBox = elemBelow.getBoundingClientRect();

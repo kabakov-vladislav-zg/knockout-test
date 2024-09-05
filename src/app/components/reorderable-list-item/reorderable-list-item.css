@@ -6,3 +6,6 @@
   flex-direction: column;
   justify-content: flex-end;
 }
+.reorderable-list-item__placeholder {
+  height: 48px;
+}

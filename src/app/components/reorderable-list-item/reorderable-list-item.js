@@ -23,7 +23,7 @@ class ReorderableListItemViewModel {
     self.getPosition = (index2 = null) => {
       const position = [self.index()];
       if (index2 !== null) {
-        position.push(index2());
+        position.push(index2);
       }
       return JSON.stringify(position);
     }
