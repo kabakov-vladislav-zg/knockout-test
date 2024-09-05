@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
 	entry: './src/main.js',
 	output: {
-		path: __dirname + '/build',
+		path: __dirname + '/dist',
 		filename: 'bundle.js'
 	},
   plugins: [
