@@ -1,14 +1,20 @@
 <div class="reorderable-list-item">
   <list-item
-    params="{ nested: false, name: name }"
+    params="{ nested: false, name: name, toggle: toggle, open: open, drag: drag }"
   ></list-item>
-  <div
-    data-bind="foreach: subcategories"
-    class="reorderable-list-item__subcategories"
-  >
-    <list-item
-      params="{ nested: true, name: $data }"
-    ></list-item>
-  </div>
+  <!-- ko if: open -->
+    <div
+      data-bind="
+        foreach: subcategories,
+        descendantsComplete: $component.onListComplete,
+        style: transitionStyle,
+      "
+      class="reorderable-list-item__subcategories"
+    >
+      <list-item
+        params="{ nested: true, name: $data, drag: $component.drag }"
+      ></list-item>
+    </div>
+  <!-- /ko -->
 </div>
 

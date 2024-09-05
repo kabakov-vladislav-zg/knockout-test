@@ -1,7 +1,7 @@
 <div class="list-item">
   <!-- ko ifnot: nested -->
     <button
-      data-bind="ifnot: nested"
+      data-bind="click: toggle, css: { 'list-item__toggle_open': open }"
       class="button list-item__toggle"
       type="button"
     ></button>
@@ -12,5 +12,6 @@
   ></div>
   <button
     class="button list-item__drag"
+    data-bind="click: drag"
   ></button>
 </div>

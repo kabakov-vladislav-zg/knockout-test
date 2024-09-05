@@ -1,3 +1,8 @@
 .reorderable-list-item__subcategories {
   padding-left: 1rem;
+  overflow: hidden;
+  transition-duration: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

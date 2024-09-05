@@ -6,12 +6,12 @@ import '../reorderable-list-item/reorderable-list-item.js';
 
 class ReorderableListViewModel {
   constructor(params) {
-    this.categories = params.value;
-    ko.observable
-  }
+    const self = this;
+    self.categories = ko.observableArray(params.value);
 
-  callback(...position) {
-    console.log(position);
+    self.drag = () => {
+      console.log(1111);
+    }
   }
 }
 

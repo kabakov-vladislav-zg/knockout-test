@@ -5,7 +5,7 @@ import './components/reorderable-list/reorderable-list.js';
 
 class ListViewModel {
   constructor() {
-    this.categories = ko.observableArray([
+    this.categories = [
       {
         name: 'Обязательные для всех',
         subcategories: [
@@ -27,7 +27,7 @@ class ListViewModel {
           'Специальные 3',
         ]
       },
-    ]);
+    ];
   }
 }
 

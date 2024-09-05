@@ -5,11 +5,65 @@ import './reorderable-list-item.css';
 import '../list-item/list-item.js';
 
 class ReorderableListItemViewModel {
-  constructor({ data, index }) {
-    this.name = data.name;
-    this.subcategories = data.subcategories;
+  constructor({ data, index, drag }) {
+    const self = this;
 
-    this.index = index;
+    self.name = data.name;
+    self.subcategories = data.subcategories;
+
+    self.index = index;
+    self.drag = drag;
+
+    self.listElem = null;
+    self.listElemHeight = null;
+
+    self.open = ko.observable(false);
+    self.transitionStyle = ko.observable(null);
+
+    const onclose = ({ target }) => {
+      if (target === self.listElem) {
+        self.transitionStyle({ height: 'auto' });
+        self.listElem.removeEventListener('transitionend', onclose);
+        self.open(false);
+        self.listElem = null;
+        self.listElemHeight = null;
+      }
+    };
+
+    const onopen = ({ target }) => {
+      if (target === self.listElem) {
+        self.transitionStyle({ height: 'auto' });
+        self.listElem.removeEventListener('transitionend', onopen);
+        self.listElemHeight = null;
+      }
+    };
+
+    self.toggle = () => {
+      if (self.listElemHeight) {
+        self.listElem.removeEventListener('transitionend', onclose);
+        self.transitionStyle({ height: self.listElemHeight });
+        self.listElem.addEventListener('transitionend', onopen);
+      } else if (self.open()) {
+        self.listElemHeight = getComputedStyle(self.listElem).height;
+        self.transitionStyle({ height: self.listElemHeight });
+        requestAnimationFrame(() => {
+          self.listElem.addEventListener('transitionend', onclose);
+          self.transitionStyle({ height: 0 });
+        });
+      } else {
+        self.open(true);
+      }
+    };
+
+    self.onListComplete = (elem) => {
+      self.listElem = elem;
+      const height = getComputedStyle(elem).height;
+      self.transitionStyle({ height: 0 });
+      requestAnimationFrame(() => {
+        self.transitionStyle({ height });
+      });
+      self.listElem.addEventListener('transitionend', onopen);
+    };
   }
 }
 
